@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utopia Videos</title>
+    <link rel="icon" type="images" href="./img/eye.png">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,500&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="icon" type="images" href="../Utopia-Main/img/eye.png">
+</head>
+
+<body>
+    <section class="Desktop"> <!--Tela com navigation versão pc-->
+        <!-- Logo da Utopia -->
+       <header>
+        <nav id="nav">
+            <ul>
+                <a href="https://rafaeldegino.github.io/Utopia-Tour/"><li>TOUR</li></a>
+                    <a href="https://rafaeldegino.github.io/Utopia-World/"><li>UTOPIA WORLD</li></a>
+                    <a href="https://rafaeldegino.github.io/Utopia-Videos/"><li>VIDEOS</li></a>
+            </ul>
+        </nav>
+       </header>
+       
+        <!-- Slider e barra da navegação -->
+        <video id="slider" autoplay loop muted>
+            <source src="./mp4/Sirens.mp4" type="video/mp4">
+        </video>
+
+        <div class="nav">
+        <ul class="navigation">
+            <li><img onclick="videoUrl('./mp4/Sirens.mp4')" src="./img/sirens.svg" alt="" id="Sirens"><p>SIRENS</p></li>
+            <li><img onclick="videoUrl('./mp4/Country.mp4')" src="./img/gods.svg" alt="" id="Gods"><p>GODS COUNTRY</p></li>
+            <li><img onclick="videoUrl('./mp4/Modern.mp4')" src="./img/Modern.svg" alt="" id="Modern"><p>MODERN JAM</p></li>
+            <li><img onclick="videoUrl('./mp4/Delresto.mp4')" src="./img/Delresto.svg" alt="" id="Delresto"><p>DELRESTO</p></li>
+        </ul>
+    </div>
+    </section> <!--Fim da Tela com navigation versão pc-->
+
+    <section class="Mobile"> <!--Tela navigation pra mobile-->
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img onclick="videoUrl('./mp4/Sirens.mp4')" src="./img/sirens.svg" alt="" id="Sirens">
+                <div class="mensagem">SIRENS</div>
+            </div>
+            <div class="carousel-slide">
+                <img onclick="videoUrl('./mp4/Country.mp4')" src="./img/gods.svg" alt="" id="Gods">
+                <div class="mensagem">GODS COUNTRY</div> 
+            </div>
+            <div class="carousel-slide">
+                <img onclick="videoUrl('./mp4/Modern.mp4')" src="./img/Modern.svg" alt="" id="Modern">
+                <div class="mensagem">MODERN JAM</div>
+            </div>
+            <div class="carousel-slide">
+                <img onclick="videoUrl('./mp4/Delresto.mp4')" src="./img/Delresto.svg" alt="" id="Delresto">
+                <div class="mensagem">DELRESTO</div>
+            </div>
+    </div>
+    </section>
+
+    <script>
+        function videoUrl(url) {
+            document.getElementById("slider").src = url;
+        }
+    </script>
+</body>
+</html>
