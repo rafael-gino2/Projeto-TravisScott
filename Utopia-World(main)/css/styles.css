@@ -1,0 +1,286 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000000 !important;
+}
+
+/* Barra nav com efeitos e img de fundo */
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Nav bar */
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header{
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 2;
+    position: relative;
+}
+
+#nav{
+    position: fixed; /* Alterado para tornar a barra de navegação fixa */
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: saturate(180%) blur(20px);
+    padding: 1.5rem;
+    z-index: 2;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#nav a{
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+    margin: auto;
+}
+
+#nav li {
+    list-style-type: none;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+  
+#nav li:hover {
+    color: #A69580; /* Cor da linha ao passar o mouse */
+}
+  
+#nav li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px; /* Espessura da linha de sublinhado */
+    background-color: #A69580; /* Cor da linha por padrÃ£o */
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0); /* Inicialmente, a linha tem largura zero */
+    transition: transform 0.3s ease;
+}
+  
+#nav li:hover::after {
+    transform: scaleX(1); /* Ao passar o mouse, a linha se expande */
+    transform-origin: bottom left;
+}
+
+
+/* Chamada */
+.chamada {
+    height: 100vh;
+    background-image: url(./img/Utopia-capa.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chamada h1 {
+    font-size: 85px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Kanit', sans-serif;
+}
+
+.chamada p {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Kanit', sans-serif;
+    font-size: 28px;
+    margin-top: 0; /* Remove qualquer margem superior */
+}
+
+/* Icons da entrada */
+.icons {
+    margin-top: 2rem; /* Espaço entre o texto e os ícones */
+}
+
+.icons img:hover{
+    scale: 1.1;
+    transition: 200ms linear;
+}
+
+.icons img{
+    text-align: center;
+    width: 70px;
+    height: 60px;
+    padding-left: 8px;
+}
+/* Fim dos icons da entrada */
+
+/* Opinioes do album */
+.utopia{
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.utopia p{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.8);
+}
+  
+.utopia p:hover::after {
+    transform: scaleX(1); /* Ao passar o mouse, a linha se expande */
+    transform-origin: bottom left;
+}
+
+.container1{
+    background-image: url(./img/Circus.svg);
+    background-size: cover;
+    position: relative;
+    min-height: 700px;
+    
+}
+
+.container2{
+    background-image: url(./img/Circus3.svg);
+    background-size: cover;
+    position: relative;
+    min-height: 700px;
+    margin-top: 190px;
+}
+
+.container3{
+    background-image: url(./img/Circus2.svg);
+    background-size: cover;
+    position: relative;
+    min-height: 700px;
+    margin-top: 190px;
+}
+
+.opiniao{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: saturate(180%) blur(20px);
+    left: 60%;
+    max-width: 505px;
+    bottom: -30px;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.opiniao p{
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Barlow Condensed', sans-serif;
+}
+/* Fim das opinioes */
+
+/* Configs do Footer e das redes sociais do artista */
+footer{
+    margin: 40px 0;
+}
+
+footer p{
+    text-align: center;
+    margin-top: 15px;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+.Redes{
+    margin-top: 180px;
+    text-align: center;
+}
+
+.Redes a img {
+    height: 35px;
+    width: 35px;
+    list-style-type: none;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+/* Fim das configs */
+
+/* Responsividade celular */
+@media screen and (max-width: 768px) {
+    .chamada{
+        background-image: url(./img/Utopia-capa1.svg) !important;
+        background-position: center !important; /* Certifica-se de que o centro da imagem seja o ponto focal */
+        background-size: cover !important; /* Ajusta o tamanho para cobrir a área, mantendo o centro visível */
+    }
+
+    header{
+        margin-top: 50px;
+    }
+
+    .utopia{
+        margin-top: -40px;
+    }
+
+    .utopia p{
+        margin-top: -40px;
+    }
+
+    #nav{
+        padding: 1.9rem;
+    }
+
+    .container1{
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .container2{
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin-top: -310px; /* Ajustado para espaçamento */
+    }
+
+    .container3{
+        background-image: url(./img/Circus-mobile.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin-top: -310px; /* Ajustado para espaçamento */
+    }
+
+    .opiniao {
+        height: 150px; /* Reduzindo a altura do card */
+        width: 80%; /* Utilizando uma largura percentual para melhor adaptação */
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: auto; /* Removendo o ajuste bottom */
+        top: 150px; /* Ajustando o posicionamento vertical */
+        margin-top: 20px; /* Espaçamento entre as opiniões */
+        padding: 20px; /* Ajustando o padding interno */
+    }
+
+    .opiniao p {
+        font-size: 14px; /* Reduzindo o tamanho da fonte */
+        text-align: center;
+        justify-content: center;
+        align-items: center; /* Centralizando verticalmente */
+        display: flex; /* Utilizando flexbox para centralização */
+    }
+
+    .Redes{
+        margin-top: -390px;
+    }
+}
